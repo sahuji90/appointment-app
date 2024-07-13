@@ -9,7 +9,7 @@ import { Appointment } from '../models/appointment';
 export class AppointmentListComponent {
   newAppointmentTitle: string = '';
   newAppointmentDate: Date = new Date();
-  appointment: Appointment [] = [];
+  appointments: Appointment [] = [];
 
   addAppointment() {
     if(this.newAppointmentTitle.trim().length && this.newAppointmentDate) {
@@ -18,10 +18,10 @@ export class AppointmentListComponent {
         title: this.newAppointmentTitle,
         date: this.newAppointmentDate
       }
-      this.appointment.push(newAppointment);
+      this.appointments.push(newAppointment);
       this.newAppointmentTitle = '';
       this.newAppointmentDate = new Date();
-      alert(this.appointment.length)
+      alert(this.appointments.length)
     }
   }
 }
